@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="230dp"
+                    android:orientation="vertical"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/back"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.92"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/baby_pic"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:padding="2sp"
+                        android:src="@drawable/baby_michelle"
+                        android:background="@drawable/round_bg"
+                        app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Michelle"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="21sp"
+                        android:textColor="#ffffff"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/baby_pic"
+                        android:layout_marginTop="10dp"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="235dp">
+
+                    <Button
+                        android:id="@+id/connect_button"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_margin="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/connect_button"
+                        android:layout_centerInParent="true"
+                        android:text="Connect"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp"
+                        />
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/loadingPanel"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" >
+
+                        <ProgressBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:indeterminate="true"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:visibility="invisible"
+                        android:id="@+id/statistics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="135dp"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="10dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/heart_icon"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_marginTop="30sp"
+                                        android:layout_centerHorizontal="true"
+                                        android:src="@drawable/icon_heart" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/heart_icon"
+                                        android:layout_centerHorizontal="true"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/bpm"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="0"
+                                            android:textSize="28sp"
+                                            android:layout_marginRight="5dp"
+                                            android:layout_marginEnd="5dp"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="BPM"
+                                            android:textSize="17sp" />
+
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:id="@+id/lung_icon"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/icon_lungs"
+                                        android:layout_marginTop="30sp"
+                                        android:layout_centerHorizontal="true"/>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/lung_icon"
+                                        android:layout_centerHorizontal="true"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/oxygen"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="0"
+                                            android:textSize="28sp"
+                                            android:layout_marginRight="5dp"
+                                            android:layout_marginEnd="5dp"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="O2"
+                                            android:textSize="17sp" />
+
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="135dp"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="10dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:id="@+id/temp_icon"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/icon_thermometer"
+                                        android:layout_marginTop="30sp"
+                                        android:layout_centerHorizontal="true"/>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/temp_icon"
+                                        android:layout_centerHorizontal="true"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/temperature"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="0"
+                                            android:textSize="28sp"
+                                            android:layout_marginRight="5dp"
+                                            android:layout_marginEnd="5dp"/>
+
+                                        <TextView
+                                            android:id="@+id/temperature_scale"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="℃"
+                                            android:textSize="17sp" />
+
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:id="@+id/humidity_icon"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/icon_humidity"
+                                        android:layout_marginTop="30sp"
+                                        android:layout_centerHorizontal="true"/>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/humidity_icon"
+                                        android:layout_centerHorizontal="true"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/respiration"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="0"
+                                            android:textSize="28sp"
+                                            android:layout_marginRight="5dp"
+                                            android:layout_marginEnd="5dp"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="%"
+                                            android:textSize="17sp" />
+
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TechBaby</string>
+    <string name="none_paired">No devices have been paired</string>
+
+    <!-- names for the settings  -->
+    <string name="general_settings_title">General</string>
+    <string name="notification_title">Notifications</string>
+
+    <!-- Temperature Preferences -->
+    <string name="temperature_scale">Choose the temperature scale</string>
+    <string name="temperature">temperature</string>
+
+    <string name="notifications_new_message">notifications_new_message</string>
+    <string name="key_notifications_new_message_ringtone">key_notifications_new_message_ringtone</string>
+    <string name="key_vibrate">key_vibrate</string>
+    <string name="key_send_feedback">key_send_feedback</string>
+    <string name="title_new_notification_sound">New message notification</string>
+    <string name="title_vibrate">Vibrate</string>
+    <string name="summary_vibrate">Vibrate on new notification</string>
+
+</resources>

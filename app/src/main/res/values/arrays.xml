@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- Temperature Scale Preference List -->
+    <string-array name="temperature_scale">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+    </string-array>
+
+    <!-- Temperature Scale Preference List Values -->
+    <string-array name="temperature_values">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+    </string-array>
+
+</resources>
