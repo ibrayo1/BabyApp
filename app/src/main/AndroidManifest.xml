@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.babyapp">
+    package="com.cs494.babyapp">
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -13,17 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity android:name="com.cs494.babyapp.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HistoryFragment" />
-        <activity android:name=".SettingsFragment" />
-        <activity android:name=".HomeFragment" />
-        <activity android:name=".MainActivity" android:screenOrientation="portrait">
+        <activity android:name="com.cs494.babyapp.HistoryFragment" />
+        <activity android:name="com.cs494.babyapp.SettingsFragment" />
+        <activity android:name="com.cs494.babyapp.HomeFragment" />
+        <activity android:name="com.cs494.babyapp.MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

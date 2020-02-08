@@ -1,4 +1,4 @@
-package com.example.babyapp;
+package com.cs494.babyapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package com.example.babyapp;
+package com.cs494.babyapp;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;

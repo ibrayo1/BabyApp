@@ -1,4 +1,4 @@
-package com.example.babyapp;
+package com.cs494.babyapp;
 
 import org.junit.Test;
 
