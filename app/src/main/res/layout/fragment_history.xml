@@ -1,13 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="History Fragment"
-        android:textSize="30sp"
-        android:layout_centerInParent="true" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" >
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:background="@drawable/purple_gradient_light">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:text="History"
+                    android:textColor="#ffffff"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/hear_rate_chart_title">
+
+                            <ImageView
+                                android:id="@+id/heart_ic"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/icon_heart"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginStart="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Heart Rate"
+                                android:textColor="#ED2839"
+                                android:textSize="18sp"
+                                android:layout_centerHorizontal="true"/>
+
+                            <ImageView
+                                android:id="@+id/heart_info_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_info_outline_black_24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginEnd="3dp"/>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_marginTop="4dp"
+                                android:layout_height="1dp"
+                                android:background="#c5c5c5"
+                                android:layout_below="@+id/heart_ic"/>
+
+                        </RelativeLayout>
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:layout_width="match_parent"
+                            android:layout_height="125dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/heart_line_chart"
+                            android:layout_below="@+id/hear_rate_chart_title"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/oxygen_chart_title">
+
+                            <ImageView
+                                android:id="@+id/oxygen_ic"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/icon_lungs"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginStart="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Oxygen"
+                                android:textColor="#3D7EF1"
+                                android:textSize="18sp"
+                                android:layout_centerHorizontal="true"/>
+
+                            <ImageView
+                                android:id="@+id/lung_info_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_info_outline_black_24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginEnd="3dp"/>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_marginTop="4dp"
+                                android:layout_height="1dp"
+                                android:background="#c5c5c5"
+                                android:layout_below="@+id/oxygen_ic"/>
+
+                        </RelativeLayout>
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:layout_width="match_parent"
+                            android:layout_height="125dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/oxygen_line_chart"
+                            android:layout_below="@+id/oxygen_chart_title"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/temp_chart_title">
+
+                            <ImageView
+                                android:id="@+id/temp_ic"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/icon_thermometer"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginStart="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Temperature"
+                                android:textColor="#FFC01B"
+                                android:textSize="18sp"
+                                android:layout_centerHorizontal="true"/>
+
+                            <ImageView
+                                android:id="@+id/temp_info_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_info_outline_black_24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="3dp"
+                                android:layout_marginEnd="3dp"/>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_marginTop="4dp"
+                                android:layout_height="1dp"
+                                android:background="#c5c5c5"
+                                android:layout_below="@+id/temp_ic"/>
+
+                        </RelativeLayout>
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:layout_width="match_parent"
+                            android:layout_height="125dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/temp_line_chart"
+                            android:layout_below="@+id/temp_chart_title"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </RelativeLayout>
